@@ -42,7 +42,7 @@ import json
 import re
 import sys
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -280,34 +280,6 @@ def run_single_trial(
     return None  # 재시도 초과 시 오답 처리
 
 
-def run_self_consistency(
-    system_prompt: str, user_prompt: str, model: str, n_trials: int = 7,
-    api_base: Optional[str] = None, api_key: Optional[str] = None,
-    max_workers: int = 4,
-) -> tuple[Optional[int], list[Optional[int]]]:
-    """stage 4 프롬프트로 N회 독립 시행(병렬)을 돌린 뒤 다수결(최빈값)로 최종 답 결정.
-
-    N회 시행은 서로 완전히 독립적이므로 스레드풀로 동시에 요청을 보낸다.
-    vLLM처럼 continuous batching을 지원하는 서버에서는 이걸로 실제 소요 시간이
-    max_workers배 가까이 줄어든다.
-    """
-    with ThreadPoolExecutor(max_workers=max(1, min(max_workers, n_trials))) as executor:
-        futures = [
-            executor.submit(
-                run_single_trial, model, system_prompt, user_prompt,
-                api_base=api_base, api_key=api_key,
-            )
-            for _ in range(n_trials)
-        ]
-        answers = [f.result() for f in futures]
-
-    valid = [a for a in answers if a is not None]
-    if not valid:
-        return None, answers
-    final = Counter(valid).most_common(1)[0][0]
-    return final, answers
-
-
 # --------------------------------------------------------------------------- #
 # 8. Dataset evaluation
 # --------------------------------------------------------------------------- #
@@ -326,25 +298,59 @@ def evaluate(
     """
     stage 0~4: 문항당 1회 채점.
     stage 5   : self-consistency(N trials, 다수결) 적용.
+
+    호출들은 "문항 하나의 N회 시행"뿐 아니라 "서로 다른 문항"까지 전부 하나의
+    스레드풀에 넣고 동시에 쏜다. vLLM처럼 continuous batching을 지원하는 서버는
+    동시 요청이 많을수록(=max_workers가 클수록) GPU를 노는 시간 없이 계속
+    배치 처리하므로, 문항 하나씩 순서대로 처리할 때보다 훨씬 빠르다.
     """
     translation_model = translation_model or model
+
+    # 1) 모든 문항의 프롬프트(번역 포함)를 먼저 병렬로 준비
+    def _build(q: Question) -> tuple[str, str]:
+        return build_prompt(q, stage, translation_model, api_base=api_base, api_key=api_key)
+
+    with ThreadPoolExecutor(max_workers=max(1, max_workers)) as executor:
+        prompts = list(executor.map(_build, questions))
+
+    trials_per_q = n_trials if stage >= 5 else 1
+
+    # 2) (문항 인덱스, system_prompt, user_prompt)를 시행 횟수만큼 풀어서
+    #    하나의 작업 큐로 만든다 — 문항 경계 없이 전부 동시에 던지기 위함.
+    tasks = [
+        (qi, prompts[qi][0], prompts[qi][1])
+        for qi in range(len(questions))
+        for _ in range(trials_per_q)
+    ]
+
+    def _run(task: tuple[int, str, str]) -> tuple[int, Optional[int]]:
+        qi, system_prompt, user_prompt = task
+        answer = run_single_trial(
+            model, system_prompt, user_prompt, api_base=api_base, api_key=api_key
+        )
+        return qi, answer
+
+    per_q_trials: list[list[Optional[int]]] = [[] for _ in questions]
+    with ThreadPoolExecutor(max_workers=max(1, max_workers)) as executor:
+        futures = [executor.submit(_run, t) for t in tasks]
+        done = 0
+        for future in as_completed(futures):
+            qi, answer = future.result()
+            per_q_trials[qi].append(answer)
+            done += 1
+            if verbose and (done % 25 == 0 or done == len(tasks)):
+                print(f"  ... {done}/{len(tasks)} 호출 완료")
+
+    # 3) 문항 순서대로 결과 집계 (시행 완료 순서는 무작위지만 다수결/단일값엔 무관)
     results = []
     correct = 0
-
-    for q in questions:
-        system_prompt, user_prompt = build_prompt(
-            q, stage, translation_model, api_base=api_base, api_key=api_key
-        )
+    for qi, q in enumerate(questions):
+        trials = per_q_trials[qi]
         if stage >= 5:
-            answer, trials = run_self_consistency(
-                system_prompt, user_prompt, model, n_trials=n_trials,
-                api_base=api_base, api_key=api_key, max_workers=max_workers,
-            )
+            valid = [a for a in trials if a is not None]
+            answer = Counter(valid).most_common(1)[0][0] if valid else None
         else:
-            answer = run_single_trial(
-                model, system_prompt, user_prompt, api_base=api_base, api_key=api_key
-            )
-            trials = [answer]
+            answer = trials[0] if trials else None
 
         is_correct = answer == q.correct_answer
         correct += int(is_correct)
@@ -419,7 +425,9 @@ def main():
     )
     parser.add_argument(
         "--max-workers", type=int, default=4,
-        help="stage 5의 self-consistency N회 시행을 동시에 몇 개까지 병렬 요청할지 (기본 4)",
+        help="문항/시행을 합쳐서 동시에 몇 개까지 병렬 요청할지 (기본 4). "
+             "vLLM처럼 continuous batching을 지원하는 서버라면 20~32 정도로 높이면 "
+             "GPU를 계속 바쁘게 써서 전체 소요 시간이 크게 줄어듦",
     )
     parser.add_argument("--output", default=None, help="결과 JSON 저장 경로")
     args = parser.parse_args()
