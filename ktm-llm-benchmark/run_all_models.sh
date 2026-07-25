@@ -44,10 +44,15 @@ mkdir -p results
 echo -e "category\tmodel\tstatus\tstarted_at\tfinished_at" > "$SUMMARY_FILE"
 
 wait_for_server() {
+  local vllm_pid="$1"
   local deadline=$((SECONDS + READY_TIMEOUT))
   while (( SECONDS < deadline )); do
     if curl -sf "http://localhost:${PORT}/v1/models" > /dev/null 2>&1; then
       return 0
+    fi
+    if ! kill -0 "$vllm_pid" 2>/dev/null; then
+      echo "  vLLM 프로세스가 이미 종료됨 (인증 실패 등) — 타임아웃까지 안 기다리고 바로 다음으로 넘어감"
+      return 1
     fi
     sleep 5
   done
@@ -108,7 +113,7 @@ run_category() {
     vllm_pid=$!
 
     # 2) 서버 준비될 때까지 대기
-    if ! wait_for_server; then
+    if ! wait_for_server "$vllm_pid"; then
       echo "[$category/$name] vLLM 서버가 ${READY_TIMEOUT}초 안에 기동되지 않음 — 건너뜀 (로그: $vllm_log)"
       kill "$vllm_pid" 2>/dev/null
       wait "$vllm_pid" 2>/dev/null
