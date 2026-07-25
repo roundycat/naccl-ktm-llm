@@ -78,6 +78,32 @@ cleanup_hf_cache() {
   fi
 }
 
+# Ctrl+C(INT)나 예기치 않은 종료(TERM/EXIT) 시에도 지금 처리 중이던 모델의
+# vLLM 프로세스와 (다운로드 도중이었을 수도 있는) 캐시를 정리한다.
+# 이걸 안 하면 중간에 끊었을 때 미완성 다운로드가 그대로 남아 디스크 쿼터를
+# 다음 실행에서 잡아먹는 문제가 생긴다 (실제로 한 번 겪었음).
+CURRENT_VLLM_PID=""
+CURRENT_REPO_ID=""
+
+cleanup_on_exit() {
+  local exit_code=$?
+  trap - EXIT INT TERM   # 정리 중 또 시그널 걸려서 재진입하는 것 방지
+
+  if [[ -n "$CURRENT_VLLM_PID" ]] && kill -0 "$CURRENT_VLLM_PID" 2>/dev/null; then
+    echo ""
+    echo "[중단 감지] vLLM 프로세스(PID $CURRENT_VLLM_PID) 종료 중..."
+    kill "$CURRENT_VLLM_PID" 2>/dev/null
+    wait "$CURRENT_VLLM_PID" 2>/dev/null
+  fi
+  if [[ -n "$CURRENT_REPO_ID" ]]; then
+    echo "[중단 감지] 진행 중이던 모델 캐시 정리: $CURRENT_REPO_ID"
+    cleanup_hf_cache "$CURRENT_REPO_ID"
+  fi
+
+  exit "$exit_code"
+}
+trap cleanup_on_exit EXIT INT TERM
+
 run_category() {
   local category="$1" models_file="$2"
   local log_dir="logs/${category}"
@@ -113,6 +139,8 @@ run_category() {
       $extra_args \
       > "$vllm_log" 2>&1 &
     vllm_pid=$!
+    CURRENT_VLLM_PID="$vllm_pid"
+    CURRENT_REPO_ID="$repo_id"
 
     # 2) 서버 준비될 때까지 대기
     if ! wait_for_server "$vllm_pid"; then
@@ -120,6 +148,8 @@ run_category() {
       kill "$vllm_pid" 2>/dev/null
       wait "$vllm_pid" 2>/dev/null
       cleanup_hf_cache "$repo_id"
+      CURRENT_VLLM_PID=""
+      CURRENT_REPO_ID=""
       for year in "${YEARS[@]}"; do
         echo -e "${category}\t${name}\t${year}\tSERVER_TIMEOUT\t-\t-" >> "$SUMMARY_FILE"
       done
@@ -170,6 +200,8 @@ run_category() {
     wait "$vllm_pid" 2>/dev/null
     sleep "$GPU_COOLDOWN"
     cleanup_hf_cache "$repo_id"
+    CURRENT_VLLM_PID=""
+    CURRENT_REPO_ID=""
 
   done < "$models_file"
 }
