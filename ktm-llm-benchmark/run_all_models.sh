@@ -36,6 +36,8 @@ API_BASE="http://localhost:${PORT}/v1"
 API_KEY="sk-dummy"
 READY_TIMEOUT=900          # vLLM 서버 기동 대기 최대 시간(초)
 GPU_COOLDOWN=10            # 모델 종료 후 GPU 메모리 정리 대기 시간(초)
+CLEANUP_HF_CACHE=true      # 모델 하나 끝날 때마다 그 모델의 HuggingFace 캐시(가중치)를 삭제할지
+HF_CACHE_DIR="${HF_HOME:-$HOME/.cache/huggingface}/hub"
 
 SUMMARY_FILE="results/_run_summary.tsv"
 mkdir -p results
@@ -50,6 +52,21 @@ wait_for_server() {
     sleep 5
   done
   return 1
+}
+
+# 디스크 공간 확보용: 모델 하나가 끝나면 그 모델의 HuggingFace 캐시(가중치, 보통 수십 GB)를 지운다.
+# repo_id "Qwen/Qwen2.5-7B-Instruct" -> 캐시 폴더명 "models--Qwen--Qwen2.5-7B-Instruct"
+cleanup_hf_cache() {
+  local repo_id="$1"
+  [[ "$CLEANUP_HF_CACHE" != true ]] && return
+  local cache_name="models--${repo_id//\//--}"
+  local cache_path="${HF_CACHE_DIR}/${cache_name}"
+  if [[ -d "$cache_path" ]]; then
+    local freed
+    freed=$(du -sh "$cache_path" 2>/dev/null | cut -f1)
+    rm -rf "$cache_path"
+    echo "  캐시 삭제: $cache_path (${freed:-?} 확보)"
+  fi
 }
 
 run_category() {
@@ -95,6 +112,7 @@ run_category() {
       echo "[$category/$name] vLLM 서버가 ${READY_TIMEOUT}초 안에 기동되지 않음 — 건너뜀 (로그: $vllm_log)"
       kill "$vllm_pid" 2>/dev/null
       wait "$vllm_pid" 2>/dev/null
+      cleanup_hf_cache "$repo_id"
       echo -e "${category}\t${name}\tSERVER_TIMEOUT\t${started_at}\t$(date +"%Y-%m-%d %H:%M:%S")" >> "$SUMMARY_FILE"
       continue
     fi
@@ -113,10 +131,11 @@ run_category() {
       > "$run_log" 2>&1
     run_status=$?
 
-    # 4) 서버 종료 + GPU 메모리 정리 대기
+    # 4) 서버 종료 + GPU 메모리 정리 대기 + 다음 모델을 위한 디스크 공간 확보
     kill "$vllm_pid" 2>/dev/null
     wait "$vllm_pid" 2>/dev/null
     sleep "$GPU_COOLDOWN"
+    cleanup_hf_cache "$repo_id"
 
     finished_at=$(date +"%Y-%m-%d %H:%M:%S")
     if [[ $run_status -eq 0 ]]; then
