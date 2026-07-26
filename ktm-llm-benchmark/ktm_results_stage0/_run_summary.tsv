@@ -1,0 +1,69 @@
+category	model	year	status	started_at	finished_at
+general	qwen2.5-7b	2022	OK	2026-07-26 11:40:00	2026-07-26 11:41:11
+general	qwen2.5-7b	2023	OK	2026-07-26 11:41:11	2026-07-26 11:42:18
+general	qwen2.5-7b	2024	OK	2026-07-26 11:42:18	2026-07-26 11:43:36
+general	qwen2.5-7b	2025	OK	2026-07-26 11:43:36	2026-07-26 11:44:45
+general	gemma2-9b	2022	SERVER_TIMEOUT	-	-
+general	gemma2-9b	2023	SERVER_TIMEOUT	-	-
+general	gemma2-9b	2024	SERVER_TIMEOUT	-	-
+general	gemma2-9b	2025	SERVER_TIMEOUT	-	-
+general	llama3.1-8b	2022	SERVER_TIMEOUT	-	-
+general	llama3.1-8b	2023	SERVER_TIMEOUT	-	-
+general	llama3.1-8b	2024	SERVER_TIMEOUT	-	-
+general	llama3.1-8b	2025	SERVER_TIMEOUT	-	-
+general	exaone3.5-7.8b	2022	OK	2026-07-26 11:50:27	2026-07-26 11:51:41
+general	exaone3.5-7.8b	2023	OK	2026-07-26 11:51:41	2026-07-26 11:52:54
+general	exaone3.5-7.8b	2024	OK	2026-07-26 11:52:54	2026-07-26 11:54:07
+general	exaone3.5-7.8b	2025	OK	2026-07-26 11:54:07	2026-07-26 11:55:17
+general	solar-10.7b	2022	OK	2026-07-26 11:57:26	2026-07-26 11:58:06
+general	solar-10.7b	2023	OK	2026-07-26 11:58:06	2026-07-26 11:59:11
+general	solar-10.7b	2024	OK	2026-07-26 11:59:11	2026-07-26 11:59:49
+general	solar-10.7b	2025	OK	2026-07-26 11:59:49	2026-07-26 12:00:43
+general	mistral-7b	2022	OK	2026-07-26 12:02:31	2026-07-26 12:04:01
+general	mistral-7b	2023	OK	2026-07-26 12:04:01	2026-07-26 12:05:28
+general	mistral-7b	2024	OK	2026-07-26 12:05:28	2026-07-26 12:07:11
+general	mistral-7b	2025	OK	2026-07-26 12:07:11	2026-07-26 12:09:03
+domain/tcm	huatuogpt-o1-7b	2022	OK	2026-07-26 12:10:50	2026-07-26 12:12:54
+domain/tcm	huatuogpt-o1-7b	2023	OK	2026-07-26 12:12:54	2026-07-26 12:14:55
+domain/tcm	huatuogpt-o1-7b	2024	OK	2026-07-26 12:14:55	2026-07-26 12:16:58
+domain/tcm	huatuogpt-o1-7b	2025	OK	2026-07-26 12:16:58	2026-07-26 12:18:59
+domain/tcm	huatuogpt-o1-8b	2022	SERVER_TIMEOUT	-	-
+domain/tcm	huatuogpt-o1-8b	2023	SERVER_TIMEOUT	-	-
+domain/tcm	huatuogpt-o1-8b	2024	SERVER_TIMEOUT	-	-
+domain/tcm	huatuogpt-o1-8b	2025	SERVER_TIMEOUT	-	-
+domain/tcm	zhongjing	2022	SERVER_TIMEOUT	-	-
+domain/tcm	zhongjing	2023	SERVER_TIMEOUT	-	-
+domain/tcm	zhongjing	2024	SERVER_TIMEOUT	-	-
+domain/tcm	zhongjing	2025	SERVER_TIMEOUT	-	-
+domain/tcm	qibo	2022	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	qibo	2023	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	qibo	2024	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	qibo	2025	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	sunsimiao	2022	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	sunsimiao	2023	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	sunsimiao	2024	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	sunsimiao	2025	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	shennong-tcm	2022	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	shennong-tcm	2023	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	shennong-tcm	2024	SKIPPED_NO_REPO_ID	-	-
+domain/tcm	shennong-tcm	2025	SKIPPED_NO_REPO_ID	-	-
+domain/western_med	medgemma-4b	2022	OK	2026-07-26 12:24:57	2026-07-26 12:25:46
+domain/western_med	medgemma-4b	2023	OK	2026-07-26 12:25:46	2026-07-26 12:26:37
+domain/western_med	medgemma-4b	2024	OK	2026-07-26 12:26:37	2026-07-26 12:27:26
+domain/western_med	medgemma-4b	2025	OK	2026-07-26 12:27:26	2026-07-26 12:28:24
+domain/western_med	meditron-7b	2022	RUN_FAILED	2026-07-26 12:34:41	2026-07-26 12:34:44
+domain/western_med	meditron-7b	2023	RUN_FAILED	2026-07-26 12:34:44	2026-07-26 12:34:48
+domain/western_med	meditron-7b	2024	RUN_FAILED	2026-07-26 12:34:48	2026-07-26 12:34:51
+domain/western_med	meditron-7b	2025	RUN_FAILED	2026-07-26 12:34:51	2026-07-26 12:34:55
+domain/western_med	biomistral-7b	2022	OK	2026-07-26 12:36:49	2026-07-26 12:37:31
+domain/western_med	biomistral-7b	2023	OK	2026-07-26 12:37:31	2026-07-26 12:38:25
+domain/western_med	biomistral-7b	2024	OK	2026-07-26 12:38:25	2026-07-26 12:39:22
+domain/western_med	biomistral-7b	2025	OK	2026-07-26 12:39:22	2026-07-26 12:40:16
+domain/western_med	medllama2-7b	2022	OK	2026-07-26 12:42:15	2026-07-26 12:44:59
+domain/western_med	medllama2-7b	2023	OK	2026-07-26 12:44:59	2026-07-26 12:47:34
+domain/western_med	medllama2-7b	2024	OK	2026-07-26 12:47:34	2026-07-26 12:49:35
+domain/western_med	medllama2-7b	2025	OK	2026-07-26 12:49:35	2026-07-26 12:52:16
+domain/western_med	openbiollm-8b	2022	OK	2026-07-26 12:54:08	2026-07-26 12:54:36
+domain/western_med	openbiollm-8b	2023	OK	2026-07-26 12:54:36	2026-07-26 12:55:18
+domain/western_med	openbiollm-8b	2024	OK	2026-07-26 12:55:18	2026-07-26 12:55:49
+domain/western_med	openbiollm-8b	2025	OK	2026-07-26 12:55:49	2026-07-26 12:56:37
