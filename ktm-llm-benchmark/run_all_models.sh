@@ -20,7 +20,7 @@
 
 set -uo pipefail
 
-# category_label:models_file 쌍의 목록. category_label은 results/, logs/ 아래 하위 경로로 쓰인다.
+# category_label:models_file 쌍의 목록. category_label은 ktm_results/, logs/ 아래 하위 경로로 쓰인다.
 CATEGORIES=(
   "general:models/general.txt"
   "domain/tcm:models/domain/tcm.txt"
@@ -43,8 +43,8 @@ GPU_COOLDOWN=10            # 모델 종료 후 GPU 메모리 정리 대기 시�
 CLEANUP_HF_CACHE=true      # 모델 하나 끝날 때마다 그 모델의 HuggingFace 캐시(가중치)를 삭제할지
 HF_CACHE_DIR="${HF_HOME:-$HOME/.cache/huggingface}/hub"
 
-SUMMARY_FILE="results/_run_summary.tsv"
-mkdir -p results
+SUMMARY_FILE="ktm_results/_run_summary.tsv"
+mkdir -p ktm_results
 echo -e "category\tmodel\tyear\tstatus\tstarted_at\tfinished_at" > "$SUMMARY_FILE"
 
 wait_for_server() {
@@ -125,6 +125,20 @@ run_category() {
       continue
     fi
 
+    # 이미 4개 연도 결과가 전부 있으면(예: 이전 Pod에서 성공해서 git에 커밋된 상태)
+    # 서버조차 띄우지 않고 통째로 건너뛴다 — 재실행할 때 시간/다운로드 낭비 방지.
+    all_years_done=true
+    for year in "${YEARS[@]}"; do
+      [[ -f "ktm_results/${category}/${year}/${name}.json" ]] || { all_years_done=false; break; }
+    done
+    if [[ "$all_years_done" == true ]]; then
+      echo "[$category/$name] 이미 4개 연도 결과 다 있음 — 건너뜀"
+      for year in "${YEARS[@]}"; do
+        echo -e "${category}\t${name}\t${year}\tALREADY_DONE\t-\t-" >> "$SUMMARY_FILE"
+      done
+      continue
+    fi
+
     echo "=================================================="
     echo "[$category/$name] 시작 ($repo_id)"
     echo "=================================================="
@@ -166,10 +180,17 @@ run_category() {
         continue
       fi
 
-      result_dir="results/${category}/${year}"
+      result_dir="ktm_results/${category}/${year}"
       mkdir -p "$result_dir"
       run_log="$log_dir/${name}_${year}_run.log"
       output_json="$result_dir/${name}.json"
+
+      if [[ -f "$output_json" ]]; then
+        echo "  [$year] 이미 결과 있음 — 건너뜀 ($output_json)"
+        echo -e "${category}\t${name}\t${year}\tALREADY_DONE\t-\t-" >> "$SUMMARY_FILE"
+        continue
+      fi
+
       started_at=$(date +"%Y-%m-%d %H:%M:%S")
 
       echo "  [$year] 시작"
