@@ -1,19 +1,16 @@
 # 중국의학(TCM) 도메인 특화 LLM 목록 (형식은 general.txt와 동일)
 #
-# 아래 4개는 "vllm serve <repo>" 한 줄로 못 띄우는 것들이라 "???"로 남겨둠 (2026-07 조사):
-#   - zhongjing: 원논문(AAAI, LLaMA 기반) 공식 저장소는 GitHub에만 있고 HF 미공개
-#     (github.com/SupritYoung/Zhongjing). HF의 CMLM/ZhongJing-2-1_8b, CMLL/ZhongJing-3-1_5b는
-#     이름만 같고 규모가 다른(1.5~1.8B) 별개 계열일 가능성이 높아 확신 없음.
-#   - qibo: 논문(arXiv:2403.16056)만 확인, HuggingFace 공개 가중치를 못 찾음.
-#   - sunsimiao: thomas-yanxin/Sunsimiao-0.1M-lora — Baichuan-7B 위에 얹는 LoRA 어댑터라
-#     base 모델과 합치거나 vLLM --enable-lora로 별도 서빙해야 함.
-#   - shennong-tcm: michaelwzhu/ShenNong-TCM-LLM — 마찬가지로 LLaMA 계열 LoRA(rank=16) 어댑터.
-# LoRA 두 개는 스크립트에 --enable-lora 지원을 추가하면 실행 가능. 직접 소스를 더 파거나,
+# 아래 2개는 "vllm serve <repo>" 한 줄로 못 띄우는 것들이라 여전히 "???"로 남겨둠 (2026-07 재조사):
+#   - qibo: 논문(arXiv:2403.16056) abstract/PDF/GitHub까지 확인했는데 공개된 가중치를 못 찾음.
+#   - sunsimiao: thomas-yanxin/Sunsimiao-0.1M-lora — Baichuan-7B 위에 얹는 LoRA 어댑터.
+#     GitHub(X-D-Lab/Sunsimiao) README에 "merged 버전"도 있다고 나오는데 정확한 repo id 확인 못 함.
+#   - shennong-tcm: michaelwzhu/ShenNong-TCM-LLM — 마찬가지로 LLaMA 계열 LoRA(rank=16) 어댑터
+#     (merged 버전 없음, 확인 완료). 아래에 일단 채워는 뒀지만 --enable-lora 지원 없이는 실행 안 됨.
 # LoRA 서빙을 지원하도록 코드를 확장하고 싶으면 알려주세요.
 
 huatuogpt-o1-7b	FreedomIntelligence/HuatuoGPT-o1-7B
 huatuogpt-o1-8b	FreedomIntelligence/HuatuoGPT-o1-8B
-zhongjing	???
+zhongjing	Suprit/Zhongjing-LLaMA-base
 qibo	???
 sunsimiao	???
 shennong-tcm	???
