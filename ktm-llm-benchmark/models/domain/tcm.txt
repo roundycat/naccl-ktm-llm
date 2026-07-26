@@ -10,7 +10,7 @@
 
 huatuogpt-o1-7b	FreedomIntelligence/HuatuoGPT-o1-7B
 huatuogpt-o1-8b	FreedomIntelligence/HuatuoGPT-o1-8B
-zhongjing	Suprit/Zhongjing-LLaMA-base
+zhongjing	Suprit/Zhongjing-LLaMA-base	--chat-template chat_templates/generic.jinja
 qibo	???
 sunsimiao	???
 shennong-tcm	???

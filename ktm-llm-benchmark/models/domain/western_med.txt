@@ -1,7 +1,11 @@
 # 서양의학 도메인 특화 LLM 목록 (형식은 general.txt와 동일)
+#
+# biomistral-7b/medllama2-7b/openbiollm-8b: tokenizer에 chat template이 없어서
+# (transformers v4.44+부터 기본 템플릿 자동 적용 안 됨) vLLM이 400 에러를 냄.
+# --chat-template chat_templates/generic.jinja 로 최소한의 범용 템플릿을 지정해줘야 돌아감.
 
 medgemma-4b	google/medgemma-4b-it
 meditron-7b	epfl-llm/meditron-7b
-biomistral-7b	BioMistral/BioMistral-7B
-medllama2-7b	llSourcell/medllama2_7b
-openbiollm-8b	aaditya/Llama3-OpenBioLLM-8B
+biomistral-7b	BioMistral/BioMistral-7B	--chat-template chat_templates/generic.jinja
+medllama2-7b	llSourcell/medllama2_7b	--chat-template chat_templates/generic.jinja
+openbiollm-8b	aaditya/Llama3-OpenBioLLM-8B	--chat-template chat_templates/generic.jinja
