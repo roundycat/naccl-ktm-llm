@@ -19,7 +19,14 @@ import numpy as np
 
 
 class RAGRetriever:
-    def __init__(self, index_dir: str, model_name: Optional[str] = None):
+    def __init__(self, index_dir: str, model_name: Optional[str] = None, device: str = "cpu"):
+        """
+        device는 기본값 "cpu"로 둔다. 실제 벤치마크 실행 중에는 vLLM 서버가
+        이미 GPU 메모리 대부분(gpu_memory_utilization)을 점유하고 있어서,
+        임베딩 모델까지 GPU에 올리면 OOM이 난다. 검색 시점엔 질문 텍스트
+        하나만 임베딩하면 되므로 CPU로도 충분히 빠르다.
+        (대량 인덱싱을 하는 rag_index.py는 vLLM 없이 단독 실행되므로 GPU를 써도 무방)
+        """
         import faiss
         from sentence_transformers import SentenceTransformer
 
@@ -34,7 +41,7 @@ class RAGRetriever:
                 if line:
                     self.chunks.append(json.loads(line))
 
-        self.model = SentenceTransformer(model_name or meta["model_name"])
+        self.model = SentenceTransformer(model_name or meta["model_name"], device=device)
 
     def retrieve(self, query: str, top_k: int = 3) -> list[dict]:
         vec = self.model.encode([query], normalize_embeddings=True)
