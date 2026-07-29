@@ -34,7 +34,10 @@ def load_chunks(rag_dir: str) -> list[dict]:
     return chunks
 
 
-def build_index(rag_dir: str, output_dir: str, model_name: str, batch_size: int = 64) -> None:
+def build_index(
+    rag_dir: str, output_dir: str, model_name: str, batch_size: int = 16,
+    max_seq_length: int = 512,
+) -> None:
     from sentence_transformers import SentenceTransformer
     import faiss
 
@@ -50,6 +53,10 @@ def build_index(rag_dir: str, output_dir: str, model_name: str, batch_size: int 
 
     print(f"임베딩 모델 로드 중: {model_name}")
     model = SentenceTransformer(model_name)
+    # bge-m3는 기본 max_seq_length가 8192라 배치와 곱해지면 어텐션 메모리가
+    # 폭발적으로 늘어남 (RAG 청크는 짧은 문단이라 512면 충분).
+    model.max_seq_length = max_seq_length
+    print(f"batch_size={batch_size}, max_seq_length={max_seq_length}")
 
     embeddings = model.encode(
         texts,
@@ -82,10 +89,20 @@ def main():
     parser.add_argument("--rag-dir", default="km_rag", help="RAG jsonl 청크들이 있는 디렉토리")
     parser.add_argument("--output-dir", default="km_rag/index", help="인덱스 저장 위치")
     parser.add_argument("--model", default="BAAI/bge-m3", help="sentence-transformers 임베딩 모델명")
-    parser.add_argument("--batch-size", type=int, default=64)
+    parser.add_argument(
+        "--batch-size", type=int, default=16,
+        help="한 번에 임베딩할 청크 수. GPU 메모리 부족(OOM)하면 더 줄이세요 (예: 4, 8)",
+    )
+    parser.add_argument(
+        "--max-seq-length", type=int, default=512,
+        help="bge-m3 기본값(8192)은 우리 짧은 청크엔 과도해서 메모리를 많이 씀. 512면 충분",
+    )
     args = parser.parse_args()
 
-    build_index(args.rag_dir, args.output_dir, args.model, args.batch_size)
+    build_index(
+        args.rag_dir, args.output_dir, args.model, args.batch_size,
+        max_seq_length=args.max_seq_length,
+    )
 
 
 if __name__ == "__main__":
