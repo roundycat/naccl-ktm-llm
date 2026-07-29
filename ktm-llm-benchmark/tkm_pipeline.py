@@ -51,6 +51,11 @@ try:
 except ImportError:  # pragma: no cover
     completion = None
 
+try:
+    from rag_retriever import RAGRetriever
+except ImportError:  # pragma: no cover
+    RAGRetriever = None
+
 
 # --------------------------------------------------------------------------- #
 # 1. Data model
@@ -182,6 +187,7 @@ EXAM_OPTIMIZED_INSTRUCTION_EN = (
 def build_prompt(
     q: Question, stage: int, model_for_translation: str,
     api_base: Optional[str] = None, api_key: Optional[str] = None,
+    rag_context: Optional[str] = None,
 ) -> tuple[str, str]:
     """
     stage 0: 원문 그대로, 한글 지시문
@@ -190,6 +196,10 @@ def build_prompt(
     stage 3: + 문제/보기 영어 번역
     stage 4: + exam-optimized instruction (CoT + 정답 하나 강제)
     (stage 5 = self-consistency는 이 프롬프트를 N번 호출하는 것으로 별도 처리)
+
+    rag_context가 주어지면 (km_rag 검색 결과), 문제 앞에 "참고 자료" 섹션으로
+    삽입한다. RAG는 stage와 독립적으로 켜고 끌 수 있음.
+
     반환값: (system_prompt, user_prompt)
     """
     question_text = q.question_kr
@@ -218,7 +228,14 @@ def build_prompt(
     system_prompt = EXAM_OPTIMIZED_INSTRUCTION_EN if stage >= 4 else instruction
 
     choices_block = "\n".join(f"{i+1}. {c}" for i, c in enumerate(choices))
-    user_prompt = f"{question_text}\n\n{choices_block}"
+
+    if rag_context:
+        user_prompt = (
+            f"[참고 자료]\n{rag_context}\n\n"
+            f"[문제]\n{question_text}\n\n{choices_block}"
+        )
+    else:
+        user_prompt = f"{question_text}\n\n{choices_block}"
 
     return system_prompt, user_prompt
 
@@ -294,6 +311,8 @@ def evaluate(
     api_key: Optional[str] = None,
     max_workers: int = 4,
     verbose: bool = True,
+    rag_retriever: Optional["RAGRetriever"] = None,
+    rag_top_k: int = 3,
 ) -> dict:
     """
     stage 0~4: 문항당 1회 채점.
@@ -303,12 +322,23 @@ def evaluate(
     스레드풀에 넣고 동시에 쏜다. vLLM처럼 continuous batching을 지원하는 서버는
     동시 요청이 많을수록(=max_workers가 클수록) GPU를 노는 시간 없이 계속
     배치 처리하므로, 문항 하나씩 순서대로 처리할 때보다 훨씬 빠르다.
+
+    rag_retriever가 주어지면 문항당 한 번(질문 원문 기준) km_rag에서 관련
+    청크를 검색해 프롬프트에 삽입한다. 검색은 번역과 마찬가지로 문항당
+    한 번만 하고 모든 시행에서 재사용한다(캐싱 효과와 동일한 이유).
     """
     translation_model = translation_model or model
 
-    # 1) 모든 문항의 프롬프트(번역 포함)를 먼저 병렬로 준비
+    # 1) 모든 문항의 프롬프트(번역 + RAG 검색 포함)를 먼저 병렬로 준비
     def _build(q: Question) -> tuple[str, str]:
-        return build_prompt(q, stage, translation_model, api_base=api_base, api_key=api_key)
+        rag_context = None
+        if rag_retriever is not None:
+            chunks = rag_retriever.retrieve(q.question_kr, top_k=rag_top_k)
+            rag_context = RAGRetriever.format_context(chunks) if chunks else None
+        return build_prompt(
+            q, stage, translation_model, api_base=api_base, api_key=api_key,
+            rag_context=rag_context,
+        )
 
     with ThreadPoolExecutor(max_workers=max(1, max_workers)) as executor:
         prompts = list(executor.map(_build, questions))
@@ -373,6 +403,8 @@ def evaluate(
         "model": model,
         "stage": stage,
         "n_trials": n_trials if stage >= 5 else 1,
+        "rag": rag_retriever is not None,
+        "rag_top_k": rag_top_k if rag_retriever is not None else None,
         "n_questions": len(questions),
         "n_correct": correct,
         "accuracy": accuracy,
@@ -429,10 +461,34 @@ def main():
              "vLLM처럼 continuous batching을 지원하는 서버라면 20~32 정도로 높이면 "
              "GPU를 계속 바쁘게 써서 전체 소요 시간이 크게 줄어듦",
     )
+    parser.add_argument(
+        "--rag", action="store_true",
+        help="km_rag 검색 결과를 프롬프트에 참고 자료로 삽입 (rag_index.py로 인덱스를 "
+             "미리 만들어둬야 함). stage와 독립적으로 켤 수 있음",
+    )
+    parser.add_argument(
+        "--rag-index-dir", default="km_rag/index",
+        help="rag_index.py로 생성한 FAISS 인덱스 디렉토리",
+    )
+    parser.add_argument(
+        "--rag-top-k", type=int, default=3,
+        help="RAG 검색 시 문항당 가져올 청크 개수",
+    )
     parser.add_argument("--output", default=None, help="결과 JSON 저장 경로")
     args = parser.parse_args()
 
     questions = load_questions(args.data)
+
+    rag_retriever = None
+    if args.rag:
+        if RAGRetriever is None:
+            raise RuntimeError(
+                "rag_retriever.py를 import할 수 없습니다. tkm_pipeline.py와 같은 "
+                "디렉토리에 있는지 확인하세요."
+            )
+        print(f"RAG 인덱스 로드 중: {args.rag_index_dir}")
+        rag_retriever = RAGRetriever(args.rag_index_dir)
+
     summary = evaluate(
         questions,
         model=args.model,
@@ -442,11 +498,14 @@ def main():
         api_base=args.api_base,
         api_key=args.api_key,
         max_workers=args.max_workers,
+        rag_retriever=rag_retriever,
+        rag_top_k=args.rag_top_k,
     )
 
     print("\n=== SUMMARY ===")
     print(f"Model       : {summary['model']}")
     print(f"Stage       : {summary['stage']}")
+    print(f"RAG         : {summary['rag']} (top_k={summary['rag_top_k']})")
     print(f"N questions : {summary['n_questions']}")
     print(f"Accuracy    : {summary['accuracy']*100:.2f}%")
 
