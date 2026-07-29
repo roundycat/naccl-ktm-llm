@@ -88,6 +88,20 @@ cleanup_hf_cache() {
   fi
 }
 
+# vLLM은 APIServer 프로세스와 별개로 EngineCore라는 자식 프로세스를 띄우는데,
+# 부모(vllm_pid)만 kill하면 이 자식이 고아로 남아 GPU 메모리를 계속 붙잡고
+# 있는 경우가 있다 (실제로 겪음). 그래서 정상 종료 시도 후에 vllm 관련
+# 프로세스를 한 번 더 싹 정리(pkill)해서 다음 모델이 GPU를 확실히 쓸 수 있게 한다.
+kill_vllm_tree() {
+  local vllm_pid="$1"
+  kill "$vllm_pid" 2>/dev/null
+  wait "$vllm_pid" 2>/dev/null
+  sleep 2
+  pkill -9 -f "VLLM::EngineCore" 2>/dev/null
+  pkill -9 -f "vllm serve" 2>/dev/null
+  sleep 1
+}
+
 # Ctrl+C(INT)나 예기치 않은 종료(TERM/EXIT) 시에도 지금 처리 중이던 모델의
 # vLLM 프로세스와 (다운로드 도중이었을 수도 있는) 캐시를 정리한다.
 CURRENT_VLLM_PID=""
@@ -100,8 +114,7 @@ cleanup_on_exit() {
   if [[ -n "$CURRENT_VLLM_PID" ]] && kill -0 "$CURRENT_VLLM_PID" 2>/dev/null; then
     echo ""
     echo "[중단 감지] vLLM 프로세스(PID $CURRENT_VLLM_PID) 종료 중..."
-    kill "$CURRENT_VLLM_PID" 2>/dev/null
-    wait "$CURRENT_VLLM_PID" 2>/dev/null
+    kill_vllm_tree "$CURRENT_VLLM_PID"
   fi
   if [[ -n "$CURRENT_REPO_ID" ]]; then
     echo "[중단 감지] 진행 중이던 모델 캐시 정리: $CURRENT_REPO_ID"
@@ -166,8 +179,7 @@ run_category() {
     # 2) 서버 준비될 때까지 대기
     if ! wait_for_server "$vllm_pid"; then
       echo "[$category/$name] vLLM 서버가 ${READY_TIMEOUT}초 안에 기동되지 않음 — 건너뜀 (로그: $vllm_log)"
-      kill "$vllm_pid" 2>/dev/null
-      wait "$vllm_pid" 2>/dev/null
+      kill_vllm_tree "$vllm_pid"
       cleanup_hf_cache "$repo_id"
       CURRENT_VLLM_PID=""
       CURRENT_REPO_ID=""
@@ -227,8 +239,7 @@ run_category() {
     done
 
     # 4) 모든 연도 끝난 뒤 서버 종료 + GPU 메모리 정리 대기 + 다음 모델을 위한 디스크 공간 확보
-    kill "$vllm_pid" 2>/dev/null
-    wait "$vllm_pid" 2>/dev/null
+    kill_vllm_tree "$vllm_pid"
     sleep "$GPU_COOLDOWN"
     cleanup_hf_cache "$repo_id"
     CURRENT_VLLM_PID=""
