@@ -1,0 +1,4726 @@
+{
+  "model": "openai/biomistral-7b",
+  "stage": 5,
+  "n_trials": 3,
+  "n_questions": 294,
+  "n_correct": 59,
+  "accuracy": 0.20068027210884354,
+  "results": [
+    {
+      "id": "KMLE-2022-S1-내과학1-Q001",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q002",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q003",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        null,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q005",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q007",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q008",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q009",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q010",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q011",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q012",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q013",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q014",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q015",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q016",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q017",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q018",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q019",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q020",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q021",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q022",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q023",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q024",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q025",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q026",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q027",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q029",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q030",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q031",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q032",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q034",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q035",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q036",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q037",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q038",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q039",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q040",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q041",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q042",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q043",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q044",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q045",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q046",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q047",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q048",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q049",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q051",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q052",
+      "subject": "내과학1",
+      "predicted": null,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q053",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q055",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q057",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q058",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q060",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q062",
+      "subject": "내과학1",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q065",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q066",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q067",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q068",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q069",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q070",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q071",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q072",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q073",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q074",
+      "subject": "내과학1",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q075",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q076",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q077",
+      "subject": "내과학1",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q078",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q079",
+      "subject": "내과학1",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S1-내과학1-Q080",
+      "subject": "내과학1",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q001",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q002",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q003",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q004",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q005",
+      "subject": "내과학2",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q006",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q007",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q008",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q009",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q010",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q011",
+      "subject": "내과학2",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q012",
+      "subject": "내과학2",
+      "predicted": null,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q013",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q014",
+      "subject": "내과학2",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q015",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q016",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q017",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q018",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q019",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q020",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q021",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q022",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q023",
+      "subject": "내과학2",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q024",
+      "subject": "내과학2",
+      "predicted": null,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q025",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q026",
+      "subject": "내과학2",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q027",
+      "subject": "내과학2",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q028",
+      "subject": "내과학2",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q029",
+      "subject": "내과학2",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q030",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q031",
+      "subject": "내과학2",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-내과학2-Q032",
+      "subject": "내과학2",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q033",
+      "subject": "침구학",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q034",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q035",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q036",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q037",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q039",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q040",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q041",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q043",
+      "subject": "침구학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q044",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        null,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q045",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q046",
+      "subject": "침구학",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q047",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q048",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q049",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q050",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q055",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q056",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q062",
+      "subject": "침구학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q063",
+      "subject": "침구학",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q064",
+      "subject": "침구학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q066",
+      "subject": "침구학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q067",
+      "subject": "침구학",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q069",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q070",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q071",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q072",
+      "subject": "침구학",
+      "predicted": 5,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q073",
+      "subject": "침구학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q074",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q075",
+      "subject": "침구학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q076",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q077",
+      "subject": "침구학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q078",
+      "subject": "침구학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        null,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q079",
+      "subject": "침구학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-침구학-Q080",
+      "subject": "침구학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q081",
+      "subject": "보건의약관계법규",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q082",
+      "subject": "보건의약관계법규",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q083",
+      "subject": "보건의약관계법규",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q084",
+      "subject": "보건의약관계법규",
+      "predicted": 5,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q085",
+      "subject": "보건의약관계법규",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q086",
+      "subject": "보건의약관계법규",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q087",
+      "subject": "보건의약관계법규",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q088",
+      "subject": "보건의약관계법규",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q089",
+      "subject": "보건의약관계법규",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q090",
+      "subject": "보건의약관계법규",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q091",
+      "subject": "보건의약관계법규",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q092",
+      "subject": "보건의약관계법규",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q093",
+      "subject": "보건의약관계법규",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q094",
+      "subject": "보건의약관계법규",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q095",
+      "subject": "보건의약관계법규",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q096",
+      "subject": "보건의약관계법규",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q097",
+      "subject": "보건의약관계법규",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q098",
+      "subject": "보건의약관계법규",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q099",
+      "subject": "보건의약관계법규",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S2-보건의약관계법규-Q100",
+      "subject": "보건의약관계법규",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q003",
+      "subject": "외과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q004",
+      "subject": "외과학",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q005",
+      "subject": "외과학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q006",
+      "subject": "외과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q007",
+      "subject": "외과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q008",
+      "subject": "외과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q009",
+      "subject": "외과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q012",
+      "subject": "외과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q013",
+      "subject": "외과학",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-외과학-Q014",
+      "subject": "외과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q017",
+      "subject": "신경정신과학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q018",
+      "subject": "신경정신과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q019",
+      "subject": "신경정신과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q020",
+      "subject": "신경정신과학",
+      "predicted": null,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q021",
+      "subject": "신경정신과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q022",
+      "subject": "신경정신과학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q023",
+      "subject": "신경정신과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q024",
+      "subject": "신경정신과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q025",
+      "subject": "신경정신과학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q026",
+      "subject": "신경정신과학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q027",
+      "subject": "신경정신과학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        null,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q028",
+      "subject": "신경정신과학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q029",
+      "subject": "신경정신과학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q030",
+      "subject": "신경정신과학",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q031",
+      "subject": "신경정신과학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        null,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-신경정신과학-Q032",
+      "subject": "신경정신과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q033",
+      "subject": "안이비인후과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q034",
+      "subject": "안이비인후과학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q035",
+      "subject": "안이비인후과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q038",
+      "subject": "안이비인후과학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        null,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q040",
+      "subject": "안이비인후과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q042",
+      "subject": "안이비인후과학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q043",
+      "subject": "안이비인후과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q046",
+      "subject": "안이비인후과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-안이비인후과학-Q047",
+      "subject": "안이비인후과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q049",
+      "subject": "부인과학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q050",
+      "subject": "부인과학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q051",
+      "subject": "부인과학",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q053",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q054",
+      "subject": "부인과학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q055",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q056",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q057",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q058",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q059",
+      "subject": "부인과학",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q060",
+      "subject": "부인과학",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q061",
+      "subject": "부인과학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q062",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q064",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q065",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q066",
+      "subject": "부인과학",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q067",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q068",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q069",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q071",
+      "subject": "부인과학",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q072",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q073",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q074",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q075",
+      "subject": "부인과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q076",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q077",
+      "subject": "부인과학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q078",
+      "subject": "부인과학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S3-부인과학-Q079",
+      "subject": "부인과학",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q001",
+      "subject": "소아과학",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q002",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q003",
+      "subject": "소아과학",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q004",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q005",
+      "subject": "소아과학",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q006",
+      "subject": "소아과학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q007",
+      "subject": "소아과학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q008",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q009",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        5,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q010",
+      "subject": "소아과학",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q011",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q012",
+      "subject": "소아과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q013",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q014",
+      "subject": "소아과학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q015",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q016",
+      "subject": "소아과학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q017",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q018",
+      "subject": "소아과학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q019",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q020",
+      "subject": "소아과학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q021",
+      "subject": "소아과학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q022",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q023",
+      "subject": "소아과학",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-소아과학-Q024",
+      "subject": "소아과학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q025",
+      "subject": "예방의학",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q026",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        1,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q028",
+      "subject": "예방의학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q029",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q030",
+      "subject": "예방의학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q031",
+      "subject": "예방의학",
+      "predicted": 5,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        5,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q032",
+      "subject": "예방의학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q033",
+      "subject": "예방의학",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q034",
+      "subject": "예방의학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q035",
+      "subject": "예방의학",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q036",
+      "subject": "예방의학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q037",
+      "subject": "예방의학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q038",
+      "subject": "예방의학",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        5,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q039",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q040",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q041",
+      "subject": "예방의학",
+      "predicted": 5,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q042",
+      "subject": "예방의학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q043",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q044",
+      "subject": "예방의학",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q045",
+      "subject": "예방의학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q046",
+      "subject": "예방의학",
+      "predicted": 2,
+      "correct_answer": 2,
+      "is_correct": true,
+      "trials": [
+        2,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q047",
+      "subject": "예방의학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-예방의학-Q048",
+      "subject": "예방의학",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        2,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q049",
+      "subject": "한방생리학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q050",
+      "subject": "한방생리학",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        null,
+        4
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q051",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q052",
+      "subject": "한방생리학",
+      "predicted": 3,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q053",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        null,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q054",
+      "subject": "한방생리학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q055",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q056",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q057",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 1,
+      "is_correct": true,
+      "trials": [
+        1,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q058",
+      "subject": "한방생리학",
+      "predicted": 4,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        4,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q059",
+      "subject": "한방생리학",
+      "predicted": null,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q060",
+      "subject": "한방생리학",
+      "predicted": 2,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q061",
+      "subject": "한방생리학",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q062",
+      "subject": "한방생리학",
+      "predicted": 3,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        3,
+        4,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q063",
+      "subject": "한방생리학",
+      "predicted": 3,
+      "correct_answer": 3,
+      "is_correct": true,
+      "trials": [
+        3,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-한방생리학-Q064",
+      "subject": "한방생리학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q065",
+      "subject": "본초학",
+      "predicted": null,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q067",
+      "subject": "본초학",
+      "predicted": 4,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        4,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q069",
+      "subject": "본초학",
+      "predicted": 4,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        4,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q070",
+      "subject": "본초학",
+      "predicted": 1,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q072",
+      "subject": "본초학",
+      "predicted": 1,
+      "correct_answer": 4,
+      "is_correct": false,
+      "trials": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q073",
+      "subject": "본초학",
+      "predicted": 3,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q074",
+      "subject": "본초학",
+      "predicted": 5,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        5,
+        2,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q075",
+      "subject": "본초학",
+      "predicted": 1,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q077",
+      "subject": "본초학",
+      "predicted": 2,
+      "correct_answer": 1,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q078",
+      "subject": "본초학",
+      "predicted": null,
+      "correct_answer": 2,
+      "is_correct": false,
+      "trials": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q079",
+      "subject": "본초학",
+      "predicted": 2,
+      "correct_answer": 3,
+      "is_correct": false,
+      "trials": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "KMLE-2022-S4-본초학-Q080",
+      "subject": "본초학",
+      "predicted": 4,
+      "correct_answer": 4,
+      "is_correct": true,
+      "trials": [
+        null,
+        4,
+        2
+      ]
+    }
+  ],
+  "rag": true,
+  "rag_stats": {
+    "classifier": "/workspace/bert_clf/best",
+    "top_k": 20,
+    "threshold": 0.5,
+    "max_inject": 5,
+    "questions_with_injection": 211,
+    "total_questions": 294,
+    "avg_injected": 0.72,
+    "inject_log": [
+      {
+        "id": "KMLE-2022-S1-내과학1-Q001",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q002",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q003",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q005",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q007",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q008",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q009",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q010",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q011",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q012",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q013",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q014",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q015",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q016",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q017",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q018",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q019",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q020",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q021",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q022",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q023",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q024",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q025",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q026",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q027",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q029",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q030",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q031",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q032",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q034",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q035",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q036",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q037",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q038",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q039",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q040",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q041",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q042",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q043",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q044",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q045",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q046",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q047",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q048",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q049",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q051",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q052",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q053",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q055",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q057",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q058",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q060",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q062",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q065",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q066",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q067",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q068",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q069",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q070",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q071",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q072",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q073",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q074",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q075",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q076",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q077",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q078",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q079",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S1-내과학1-Q080",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q001",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q002",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q003",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q004",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q005",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q006",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q007",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q008",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q009",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q010",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q011",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q012",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q013",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q014",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q015",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q016",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q017",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q018",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q019",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q020",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q021",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q022",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q023",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q024",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q025",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q026",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q027",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q028",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q029",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q030",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q031",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-내과학2-Q032",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q033",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q034",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q035",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q036",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q037",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q039",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q040",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q041",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q043",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q044",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q045",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q046",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q047",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q048",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q049",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q050",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q055",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q056",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q062",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q063",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q064",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q066",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q067",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q069",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q070",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q071",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q072",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q073",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q074",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q075",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q076",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q077",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q078",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q079",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-침구학-Q080",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q081",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q082",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q083",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q084",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q085",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q086",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q087",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q088",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q089",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q090",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q091",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q092",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q093",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q094",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q095",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q096",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q097",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q098",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q099",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S2-보건의약관계법규-Q100",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q003",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q004",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q005",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q006",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q007",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q008",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q009",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q012",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q013",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-외과학-Q014",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q017",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q018",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q019",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q020",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q021",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q022",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q023",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q024",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q025",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q026",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q027",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q028",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q029",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q030",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q031",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-신경정신과학-Q032",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q033",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q034",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q035",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q038",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q040",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q042",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q043",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q046",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-안이비인후과학-Q047",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q049",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q050",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q051",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q053",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q054",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q055",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q056",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q057",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q058",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q059",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q060",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q061",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q062",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q064",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q065",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q066",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q067",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q068",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q069",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q071",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q072",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q073",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q074",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q075",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q076",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q077",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q078",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S3-부인과학-Q079",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q001",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q002",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q003",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q004",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q005",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q006",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q007",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q008",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q009",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q010",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q011",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q012",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q013",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q014",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q015",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q016",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q017",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q018",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q019",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q020",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q021",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q022",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q023",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-소아과학-Q024",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q025",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q026",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q028",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q029",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q030",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q031",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q032",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q033",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q034",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q035",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q036",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q037",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q038",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q039",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q040",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q041",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q042",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q043",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q044",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q045",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q046",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q047",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-예방의학-Q048",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q049",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q050",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q051",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q052",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q053",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q054",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q055",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q056",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q057",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q058",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q059",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q060",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q061",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q062",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q063",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-한방생리학-Q064",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q065",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q067",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q069",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q070",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q072",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q073",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q074",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q075",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q077",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q078",
+        "n_injected": 0
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q079",
+        "n_injected": 1
+      },
+      {
+        "id": "KMLE-2022-S4-본초학-Q080",
+        "n_injected": 1
+      }
+    ]
+  }
+}

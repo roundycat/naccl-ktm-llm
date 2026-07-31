@@ -1,0 +1,47 @@
+[fix_general] domain 완료 대기 07-28 22:11
+[fix_general] domain 완료 → ollama 재시작(parallel 4) 07-29 00:29
+===== 재실행 qwen2.5:7b 2025 00:30 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2025.json: 76/276 주입 (분류기 미로드)
+Accuracy : 44.93%
+주입된 문항: 76/276 (평균 0.28개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2025.json: 192/276 주입 (분류기 미로드)
+Accuracy : 42.03%
+주입된 문항: 192/276 (평균 0.7개 주입)
+===== 재실행 exaone3.5:7.8b 2025 00:59 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2025.json: 76/276 주입 (분류기 미로드)
+Accuracy : 42.03%
+주입된 문항: 76/276 (평균 0.28개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2025.json: 192/276 주입 (분류기 미로드)
+Accuracy : 39.86%
+주입된 문항: 192/276 (평균 0.7개 주입)
+===== 재실행 solar:10.7b 2024 01:34 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2024.json: 73/288 주입 (분류기 미로드)
+Accuracy : 46.53%
+주입된 문항: 73/288 (평균 0.25개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2024.json: 195/288 주입 (분류기 미로드)
+Accuracy : 44.79%
+주입된 문항: 195/288 (평균 0.68개 주입)
+===== 재실행 solar:10.7b 2025 02:11 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2025.json: 76/276 주입 (분류기 미로드)
+Accuracy : 32.97%
+주입된 문항: 76/276 (평균 0.28개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2025.json: 192/276 주입 (분류기 미로드)
+Accuracy : 33.70%
+주입된 문항: 192/276 (평균 0.7개 주입)
+===== 재실행 mistral:7b 2024 02:45 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2024.json: 73/288 주입 (분류기 미로드)
+Accuracy : 42.01%
+주입된 문항: 73/288 (평균 0.25개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2024.json: 195/288 주입 (분류기 미로드)
+Accuracy : 39.58%
+주입된 문항: 195/288 (평균 0.68개 주입)
+===== 재실행 mistral:7b 2025 03:12 =====
+[RAG] 사전계산 주입 로드 /workspace/rag_injections_2025.json: 76/276 주입 (분류기 미로드)
+Accuracy : 32.25%
+주입된 문항: 76/276 (평균 0.28개 주입)
+[RAG] 사전계산 주입 로드 /workspace/graphrag_inj_2025.json: 192/276 주입 (분류기 미로드)
+Accuracy : 31.16%
+주입된 문항: 192/276 (평균 0.7개 주입)
+[fix_general] 재실행 완료 → 최종 tune+report 07-29 03:39
+stage5 보고서 저장: /workspace/report_stage5.docx (모델 9, 과목 12)
+===== FIX_GENERAL DONE 07-29 03:39 =====

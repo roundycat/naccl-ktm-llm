@@ -1,0 +1,107 @@
+[chain] general 완료 대기 15:30
+[chain] general 완료! ollama 정지 16:11
+[chain] domain 매트릭스 시작 16:11
+########## huatuogpt-o1-7b start 16:11 ##########
+>> ready 16:13
+----- huatuogpt-o1-7b 2022 base -----
+Accuracy : 46.60%
+----- huatuogpt-o1-7b 2022 adaptive -----
+Accuracy : 48.98%
+주입된 문항: 81/294 (평균 0.28개 주입)
+----- huatuogpt-o1-7b 2023 base -----
+Accuracy : 46.43%
+----- huatuogpt-o1-7b 2023 adaptive -----
+Accuracy : 50.71%
+주입된 문항: 99/280 (평균 0.35개 주입)
+----- huatuogpt-o1-7b 2024 base -----
+Accuracy : 55.56%
+----- huatuogpt-o1-7b 2024 adaptive -----
+Accuracy : 49.65%
+주입된 문항: 73/288 (평균 0.25개 주입)
+----- huatuogpt-o1-7b 2025 base -----
+Accuracy : 41.30%
+----- huatuogpt-o1-7b 2025 adaptive -----
+Accuracy : 46.38%
+주입된 문항: 76/276 (평균 0.28개 주입)
+########## huatuogpt-o1-7b done 16:35 ##########
+########## biomistral-7b start 16:35 ##########
+>> ready 16:38
+----- biomistral-7b 2022 base -----
+Accuracy : 21.43%
+----- biomistral-7b 2022 adaptive -----
+Accuracy : 20.75%
+주입된 문항: 81/294 (평균 0.28개 주입)
+----- biomistral-7b 2023 base -----
+Accuracy : 17.14%
+----- biomistral-7b 2023 adaptive -----
+Accuracy : 18.21%
+주입된 문항: 99/280 (평균 0.35개 주입)
+----- biomistral-7b 2024 base -----
+Accuracy : 21.88%
+----- biomistral-7b 2024 adaptive -----
+Accuracy : 23.26%
+주입된 문항: 73/288 (평균 0.25개 주입)
+----- biomistral-7b 2025 base -----
+Accuracy : 14.49%
+----- biomistral-7b 2025 adaptive -----
+Accuracy : 12.32%
+주입된 문항: 76/276 (평균 0.28개 주입)
+########## biomistral-7b done 16:54 ##########
+########## medllama2-7b start 16:54 ##########
+>> ready 16:57
+----- medllama2-7b 2022 base -----
+Accuracy : 34.35%
+----- medllama2-7b 2022 adaptive -----
+----- medllama2-7b 2023 base -----
+Accuracy : 37.14%
+----- medllama2-7b 2023 adaptive -----
+Accuracy : 32.86%
+주입된 문항: 99/280 (평균 0.35개 주입)
+----- medllama2-7b 2024 base -----
+Accuracy : 32.29%
+----- medllama2-7b 2024 adaptive -----
+Accuracy : 30.21%
+주입된 문항: 73/288 (평균 0.25개 주입)
+----- medllama2-7b 2025 base -----
+Accuracy : 20.65%
+----- medllama2-7b 2025 adaptive -----
+Accuracy : 19.20%
+주입된 문항: 76/276 (평균 0.28개 주입)
+########## medllama2-7b done 17:15 ##########
+########## openbiollm-8b start 17:15 ##########
+>> ready 17:17
+----- openbiollm-8b 2022 base -----
+Accuracy : 34.01%
+----- openbiollm-8b 2022 adaptive -----
+Accuracy : 30.95%
+주입된 문항: 81/294 (평균 0.28개 주입)
+----- openbiollm-8b 2023 base -----
+Accuracy : 30.71%
+----- openbiollm-8b 2023 adaptive -----
+Accuracy : 30.00%
+주입된 문항: 99/280 (평균 0.35개 주입)
+----- openbiollm-8b 2024 base -----
+Accuracy : 34.72%
+----- openbiollm-8b 2024 adaptive -----
+Accuracy : 34.72%
+주입된 문항: 73/288 (평균 0.25개 주입)
+----- openbiollm-8b 2025 base -----
+Accuracy : 27.54%
+----- openbiollm-8b 2025 adaptive -----
+Accuracy : 26.45%
+주입된 문항: 76/276 (평균 0.28개 주입)
+########## openbiollm-8b done 17:23 ##########
+########## medgemma-4b start 17:23 ##########
+!! vLLM died (medgemma-4b)
+!! medgemma-4b 서빙 실패 — 로그:
+(APIServer pid=40882)   File "/root/vllm_venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 503, in cached_files
+(APIServer pid=40882)     raise OSError(
+(APIServer pid=40882) OSError: You are trying to access a gated repo.
+(APIServer pid=40882) Make sure to have access to it at https://huggingface.co/google/medgemma-4b-it.
+(APIServer pid=40882) 403 Client Error. (Request ID: Root=1-6a6793fe-512ba7ea30e014a8042ea458;f58f58ab-bb9e-4d53-a777-1f46a3d45e22)
+(APIServer pid=40882) 
+(APIServer pid=40882) Cannot access gated repo for url https://huggingface.co/google/medgemma-4b-it/resolve/main/config.json.
+(APIServer pid=40882) Access to model google/medgemma-4b-it is restricted and you are not in the authorized list. Visit https://huggingface.co/google/medgemma-4b-it to ask for access.
+########## medgemma-4b done 17:23 ##########
+===== ALL DOMAIN MATRIX DONE 17:23 =====
+[chain] ===== 전체 완료 (general+domain) 17:23 =====

@@ -1,0 +1,17 @@
+# 빌드 컨텍스트 최소화 — 이미지는 requirements 파일만 필요.
+# 코드·데이터는 런타임에 bind-mount(.:/workspace)로 들어온다.
+.venv/
+.git/
+**/__pycache__/
+**/*.pyc
+**/*.jsonl
+dataset/
+results/
+transcribe/
+**/data/
+**/eval/
+**/eval_out/
+chroma_db/
+.env
+*.log
+.DS_Store

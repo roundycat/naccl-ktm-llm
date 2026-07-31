@@ -1,0 +1,93 @@
+# KTM-LLM 재현형 실험 스택 — 어디서 돌려도 `docker compose up` 하나로 동일하게 뜬다.
+#   서비스: ollama(로컬 LLM 추론, GPU) + neo4j(지식그래프) + app(실험 코드).
+#   컨테이너끼리는 localhost 가 아니라 '서비스명'으로 접속한다(app→ollama, app→neo4j).
+#   용량·연산은 호스트(원격 GPU 박스)가 감당하고, 산출물은 named volume 에 영구 보존된다.
+#
+#   필요: Docker Compose v2.24+ (env_file optional 문법). GPU 는 nvidia-container-toolkit.
+#   빠른 시작:  bash docker/bootstrap.sh          (스택 기동 + 모델 pull + 헬스체크)
+#   또는:       docker compose up -d --build
+name: ktm-llm
+
+services:
+  # ── 로컬 LLM 추론 런타임(GPU) ─────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ktm-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama      # 모델 가중치 영구 보존(재빌드에도 유지)
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+    # GPU 예약(호스트에 nvidia-container-toolkit 필요). GPU 없으면 이 deploy 블록을 지우면 CPU로 동작.
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # ── 지식그래프 DB(GraphRAG step1/3/4) ────────────────────────────────────
+  neo4j:
+    image: neo4j:5-community
+    container_name: ktm-neo4j
+    ports:
+      - "7474:7474"    # 브라우저 UI
+      - "7687:7687"    # Bolt
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PW:-ktmpassword}
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 1G
+    volumes:
+      - neo4j-data:/data
+    restart: unless-stopped
+
+  # ── 실험 코드(용어 RAG + GraphRAG) ───────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: ktm-llm-app:latest
+    container_name: ktm-app
+    working_dir: /workspace
+    volumes:
+      - .:/workspace                       # 라이브 코드·데이터(bind-mount)
+      - hf-cache:/root/.cache/huggingface  # BGE-m3 등 HF 모델 캐시 영구 보존
+    env_file:
+      - path: .env                         # 앱 .env(API 키 등) — 있으면 로드
+        required: false
+    environment:
+      # 컨테이너 네트워크: localhost 대신 서비스명으로 접속하도록 엔드포인트 덮어쓰기
+      OLLAMA_BASE_URL: http://ollama:11434/v1   # training/ (OpenAI 호환)
+      OLLAMA_HOST: http://ollama:11434          # graphrag/bigse0u1 step3 (native API)
+      OLLAMA_API_KEY: ollama
+      GLOBAL_PROVIDER: local
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PW: ${NEO4J_PW:-ktmpassword}
+      LLM_PROVIDER: ollama
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      ollama:
+        condition: service_healthy
+      neo4j:
+        condition: service_started
+    command: ["sleep", "infinity"]        # 상주 → `docker compose exec app ...` 로 실험 실행
+    # torch 임베딩(step2 BGE-m3)에 GPU 를 쓰려면 아래 주석 해제:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  ollama-models:
+  neo4j-data:
+  hf-cache:

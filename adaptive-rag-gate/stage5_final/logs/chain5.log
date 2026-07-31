@@ -1,0 +1,98 @@
+[chain5] general 완료 대기 17:26
+[chain5] general 완료 → ollama 정지 + domain 21:38
+##### huatuogpt-o1-7b s5 start 21:38 #####
+Accuracy : 51.36%
+Accuracy : 50.68%
+Accuracy : 52.14%
+Accuracy : 49.29%
+Accuracy : 52.78%
+Accuracy : 52.43%
+Accuracy : 47.10%
+Accuracy : 43.48%
+##### huatuogpt-o1-7b done 22:44 #####
+##### biomistral-7b s5 start 22:44 #####
+Accuracy : 25.85%
+Accuracy : 20.07%
+Accuracy : 26.79%
+Accuracy : 23.93%
+Accuracy : 23.26%
+Accuracy : 22.57%
+Accuracy : 20.65%
+Accuracy : 19.57%
+##### biomistral-7b done 23:08 #####
+##### medllama2-7b s5 start 23:08 #####
+Accuracy : 29.59%
+Accuracy : 34.64%
+Accuracy : 32.50%
+Accuracy : 27.08%
+Accuracy : 25.69%
+Accuracy : 23.55%
+Accuracy : 22.10%
+##### medllama2-7b done 23:41 #####
+##### openbiollm-8b s5 start 23:41 #####
+Accuracy : 30.61%
+Accuracy : 31.29%
+Accuracy : 34.29%
+Accuracy : 29.29%
+Accuracy : 34.38%
+Accuracy : 28.12%
+Accuracy : 27.17%
+Accuracy : 22.83%
+##### openbiollm-8b done 23:57 #####
+##### medgemma-4b s5 start 23:57 #####
+Accuracy : 44.56%
+Accuracy : 45.92%
+Accuracy : 40.36%
+Accuracy : 38.21%
+Accuracy : 41.67%
+Accuracy : 44.44%
+Accuracy : 34.06%
+Accuracy : 34.06%
+##### medgemma-4b done 00:28 #####
+===== STAGE5 DOMAIN DONE 00:28 =====
+[chain5] maxrel 계산 + 게이트 tune 00:28
+[maxrel_graph] 2022: 294문항 (211개 근거有) -> /workspace/maxrel_graph_2022.json
+[maxrel_graph] 2023: 280문항 (197개 근거有) -> /workspace/maxrel_graph_2023.json
+[maxrel_graph] 2024: 288문항 (195개 근거有) -> /workspace/maxrel_graph_2024.json
+[maxrel_graph] 2025: 276문항 (192개 근거有) -> /workspace/maxrel_graph_2025.json
+모델               |  plain |   증강0.5 |  선택(oracle) |   선택(dev튜닝) | devT/C
+------------------------------------------------------------------------------------
+MedGemma-4B      |  42.1% |   40.2% |      43.4% |      42.8% | 0.00/0.67
+SOLAR-10.7B      |  38.7% |   45.1% |      43.9% |      39.8% | 0.75/0.00
+Qwen2.5-7B       |  49.4% |   49.8% |      51.5% |      49.5% | 0.90/0.00
+OpenBioLLM-8B    |  27.1% |   31.6% |      29.0% |      28.3% | 0.05/0.00
+Mistral-7B       |  30.7% |   40.4% |      36.2% |      31.3% | 0.00/0.00
+HuatuoGPT-o1-7B  |  48.3% |   50.9% |      50.4% |      49.8% | 0.15/0.00
+EXAONE-3.5-7.8B  |  47.3% |   43.9% |      50.8% |      48.4% | 0.00/0.67
+BioMistral-7B    |  21.1% |   24.2% |      21.9% |      20.3% | 0.05/0.00
+
+선택(oracle)=상한(수학적으로 plain 이상), 선택(dev튜닝)=2022로 (T,C) 정해 전체 적용(정직).
+저장: tune_dense_results.json
+모델               |  plain |   증강0.5 |  선택(oracle) |   선택(dev튜닝) | devT/C
+------------------------------------------------------------------------------------
+MedGemma-4B      |  42.1% |   40.8% |      43.8% |      42.8% | 0.05/0.00
+OpenBioLLM-8B    |  27.1% |   27.9% |      28.6% |      28.1% | 0.00/0.00
+MedLLaMA2-7B     |  19.4% |   27.5% |      24.0% |      24.0% | 0.00/0.00
+BioMistral-7B    |  21.1% |   21.5% |      21.9% |      21.0% | 0.10/0.67
+HuatuoGPT-o1-7B  |  48.3% |   49.0% |      50.1% |      50.1% | 0.00/0.67
+SOLAR-10.7B      |  38.7% |   42.0% |      43.7% |      40.3% | 0.00/0.67
+Qwen2.5-7B       |  49.4% |   49.5% |      52.1% |      50.9% | 0.00/0.67
+Mistral-7B       |  30.7% |   37.8% |      36.9% |      32.2% | 0.00/0.67
+EXAONE-3.5-7.8B  |  47.3% |   45.9% |      49.9% |      47.5% | 0.05/0.67
+
+선택(oracle)=상한(수학적으로 plain 이상), 선택(dev튜닝)=2022로 (T,C) 정해 전체 적용(정직).
+저장: tune_graph_results.json
+[skip stage!=5] RES_mistral_7b_2025_graph.json stage=4
+[skip stage!=5] RES_solar_10_7b_2025_graph.json stage=4
+[skip stage!=5] RES_exaone3_5_7_8b_2025_graph.json stage=4
+[skip stage!=5] RES_qwen2_5_7b_2025_graph.json stage=4
+[skip stage!=5] RES_mistral_7b_2024_graph.json stage=4
+[skip stage!=5] RES_solar_10_7b_2024_graph.json stage=4
+[skip stage!=5] RES_mistral_7b_2025_rag.json stage=4
+[skip stage!=5] RES_solar_10_7b_2025_rag.json stage=4
+[skip stage!=5] RES_exaone3_5_7_8b_2025_rag.json stage=4
+[skip stage!=5] RES_qwen2_5_7b_2025_rag.json stage=4
+[skip stage!=5] RES_mistral_7b_2024_rag.json stage=4
+[skip stage!=5] RES_solar_10_7b_2024_rag.json stage=4
+stage5 보고서 저장: /workspace/report_stage5.docx (모델 9, 과목 12)
+===== STAGE5 PIPELINE DONE 00:29 =====
