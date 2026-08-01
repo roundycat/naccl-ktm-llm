@@ -13,7 +13,7 @@
           → LLM 답변 (팀원의 stage 0~5 기법과 결합)
 ```
 
-- `build_corpus.py` — GraphRAG 지식(처방/용어/해설 12,685개)을 분류기 학습 포맷으로 `corpus.jsonl` 생성. **오프라인 완료.**
+- `build_corpus.py` — GraphRAG 지식(처방/용어/해설 12,685개)을 분류기 학습 포맷으로 `../data/corpus.jsonl` 생성. **오프라인 완료.**
 - `adaptive_rag.py` — 2단계 검색(BGE-m3 → BERT 게이트) 모듈.
 - `run_rag.py` — 팀원 `tkm_pipeline`을 재사용(파일 수정 X)하며 RAG 주입. 같은 스크립트로 baseline/RAG 둘 다.
 
@@ -36,7 +36,7 @@ python run_rag.py --model openai/Qwen/Qwen2.5-7B-Instruct \
 python run_rag.py --model openai/Qwen/Qwen2.5-7B-Instruct \
     --api-base http://localhost:8000/v1 --api-key sk-dummy \
     --data ../ktm-llm-benchmark/KTM_data/2025.json --stage 4 \
-    --rag --corpus corpus.jsonl --classifier /workspace/bert_clf/best \
+    --rag --corpus ../data/corpus.jsonl --classifier /workspace/bert_clf/best \
     --output out_qwen_2025_s4_rag.json
 ```
 

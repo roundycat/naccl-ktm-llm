@@ -1,6 +1,10 @@
-openai>=1.40.0
-python-dotenv>=1.0.0
-tqdm>=4.66.0
-# KIOM 용어 스크레이핑(scripts/fetch_terminology.py)
-requests>=2.31.0
-beautifulsoup4>=4.12.0
+torch>=2.0
+transformers>=4.40
+peft>=0.11
+sentence-transformers>=3.0
+numpy>=1.24
+
+# ../ktm-llm-benchmark/tkm_pipeline.py 를 호출하는 스크립트(adaptive_rag/run_rag.py 등)를 쓰려면
+# 그쪽 requirements(litellm 등)도 함께 설치해야 함
+
+# graphrag/ 아래 GraphRAG 이관 스크립트를 쓸 경우 graphrag/requirements_graphrag.txt 별도 설치

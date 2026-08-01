@@ -27,9 +27,12 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# 팀원 벤치마크(tkm_pipeline.py) 경로 — 기본값은 형제 디렉터리, 환경변수로 재정의 가능.
+# 팀원 벤치마크(tkm_pipeline.py) 경로 — 기본값은 adaptive-rag-gate/의 형제 디렉터리
+# (저장소 최상위에 ktm-llm-benchmark/ 와 adaptive-rag-gate/ 가 나란히 있는 실제 구조),
+# 환경변수로 재정의 가능.
 BENCH_DIR = os.environ.get(
-    "TKM_BENCH_DIR", os.path.join(os.path.dirname(HERE), "ktm-llm-benchmark"))
+    "TKM_BENCH_DIR",
+    os.path.join(os.path.dirname(os.path.dirname(HERE)), "ktm-llm-benchmark"))
 sys.path.insert(0, BENCH_DIR)
 sys.path.insert(0, HERE)
 
