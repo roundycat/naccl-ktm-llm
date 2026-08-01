@@ -3,8 +3,12 @@ transformers>=4.40
 peft>=0.11
 sentence-transformers>=3.0
 numpy>=1.24
+litellm>=1.40.0
+# litellm: ../baseline/tkm_pipeline.py 가 사용 (adaptive_rag/run_rag.py 가 이 모듈을
+# import해서 그대로 재사용함). ../baseline/ 자체에는 requirements.txt가 없고
+# README.md에 pip install 안내만 있어 여기서 명시적으로 관리함.
 
-# ../ktm-llm-benchmark/tkm_pipeline.py 를 호출하는 스크립트(adaptive_rag/run_rag.py 등)를 쓰려면
-# 그쪽 requirements(litellm 등)도 함께 설치해야 함
+# 참고: scipy/scikit-learn은 쓰지 않는다 — McNemar 검정도 math.comb로 직접 구현되어
+# 있음(gate_tuning/tune_gate.py). 실제 import 기준으로만 이 목록을 유지할 것.
 
 # graphrag/ 아래 GraphRAG 이관 스크립트를 쓸 경우 graphrag/requirements_graphrag.txt 별도 설치

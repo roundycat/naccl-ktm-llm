@@ -19,6 +19,11 @@ _*.png
 # 따라서 무시 규칙을 두지 않는다(이전에는 무시로 선언했으나 force-add 되어 있어
 # 선언과 실제가 어긋났다 → 실제 추적 상태에 맞춰 규칙 제거). 산출물을 다시 무시하려면
 # 먼저 `git rm --cached -r results data/finetune_*.jsonl` 후 아래 패턴을 복원할 것.
+#
+# 예외: results/logs/ 는 원격 실행 원시 로그(비정본, 디버깅용)라 논문 부록에 불필요하여
+# git rm --cached -r results/logs 로 추적 해제함. 디스크에는 그대로 남아있음.
+results/logs/
+*.log
 
 # --- Python ---
 __pycache__/

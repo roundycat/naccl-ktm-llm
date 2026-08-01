@@ -10,7 +10,7 @@ T3: {plain,
 LOYO(나머지 연도로 선택 → held-out 적용)는 동일하게 유지하므로 test 누수가 없다.
 DELTA(abstain 마진)는 인자로 조절 가능하며 기본값은 tune_gate1 과 같은 0.015.
 
-사용: tune_gate3.py <pred_dir> <maxrel_dir> [delta]
+사용: tune_gate.py <pred_dir> <maxrel_dir> [delta]  (구 tune_gate3.py, T3=채택된 최종 설계)
 """
 import glob
 import json

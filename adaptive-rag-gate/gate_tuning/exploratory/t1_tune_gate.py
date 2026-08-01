@@ -4,7 +4,7 @@
 각 문항: (maxrel ≥ T) AND (SC신뢰도 ≥ C) 면 증강답, 아니면 plain답. (둘 다 계산돼 있어 '선택'만)
 best-(T,C)는 plain 이상 보장(T=1→전부 plain). 관련·확신 있는 문항만 바꿔 죽임(HURT)을 줄임.
 보고: plain / 증강(0.5) / 선택(oracle 상한) / 선택(dev=2022 튜닝→전체 적용, 정직한 held-out).
-출력: <OUTNAME> + 콘솔표.  사용: tune_gate1.py <maxrel_prefix> <out.json> <rag|graph>
+출력: <OUTNAME> + 콘솔표.  사용: t1_tune_gate.py <maxrel_prefix> <out.json> <rag|graph>  (구 tune_gate1.py, T2/T3에 밀린 초기 설계)
 """
 import glob
 import json

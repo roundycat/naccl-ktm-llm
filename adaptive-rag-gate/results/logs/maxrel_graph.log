@@ -1,6 +1,0 @@
-Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  35%|███▌      | 71/201 [00:00<00:00, 685.57it/s]Loading weights:  70%|██████▉   | 140/201 [00:00<00:00, 328.59it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 428.51it/s]
-[maxrel_graph] 2022: 294문항 (211개 근거有) -> /workspace/maxrel_graph_2022.json
-[maxrel_graph] 2023: 280문항 (197개 근거有) -> /workspace/maxrel_graph_2023.json
-[maxrel_graph] 2024: 288문항 (195개 근거有) -> /workspace/maxrel_graph_2024.json
-[maxrel_graph] 2025: 276문항 (192개 근거有) -> /workspace/maxrel_graph_2025.json
-MAXREL_GRAPH DONE

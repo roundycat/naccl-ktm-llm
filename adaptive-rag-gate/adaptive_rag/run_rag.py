@@ -12,11 +12,11 @@ build_prompt를 감싸(wrap) 각 문항에 '우리 분류기가 관련하다고 
 실행 예 (박스, vLLM 서버가 :8000에 exaone/qwen 서빙 중일 때):
   # baseline
   python run_rag.py --model openai/qwen2.5-7b --api-base http://localhost:8000/v1 \
-      --api-key sk-dummy --data ../ktm-llm-benchmark/KTM_data/2025.json --stage 4 \
+      --api-key sk-dummy --data ../baseline/KTM_data/2025.json --stage 4 \
       --output out_qwen_2025_stage4_base.json
   # + 어댑티브 RAG
   python run_rag.py --model openai/qwen2.5-7b --api-base http://localhost:8000/v1 \
-      --api-key sk-dummy --data ../ktm-llm-benchmark/KTM_data/2025.json --stage 4 \
+      --api-key sk-dummy --data ../baseline/KTM_data/2025.json --stage 4 \
       --rag --corpus corpus.jsonl --classifier /workspace/bert_clf/best \
       --output out_qwen_2025_stage4_rag.json
 """
@@ -28,11 +28,11 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # 팀원 벤치마크(tkm_pipeline.py) 경로 — 기본값은 adaptive-rag-gate/의 형제 디렉터리
-# (저장소 최상위에 ktm-llm-benchmark/ 와 adaptive-rag-gate/ 가 나란히 있는 실제 구조),
+# (저장소 최상위에 baseline/ 와 adaptive-rag-gate/ 가 나란히 있는 실제 구조),
 # 환경변수로 재정의 가능.
 BENCH_DIR = os.environ.get(
     "TKM_BENCH_DIR",
-    os.path.join(os.path.dirname(os.path.dirname(HERE)), "ktm-llm-benchmark"))
+    os.path.join(os.path.dirname(os.path.dirname(HERE)), "baseline"))
 sys.path.insert(0, BENCH_DIR)
 sys.path.insert(0, HERE)
 

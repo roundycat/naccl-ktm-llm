@@ -1,0 +1,65 @@
+# adaptive-rag-gate 실험 설정 — 참조/기록용 문서.
+#
+# 주의: 이 파일은 아직 스크립트가 실제로 읽어들이는 설정이 아니다. 지금은 아래
+# 값들이 여러 .py/.sh 파일에 하드코딩되어 흩어져 있는데(각 값 옆에 실제 위치를
+# 적어뒀다), 그걸 전부 이 yaml을 읽도록 재배선하는 건 GPU 없이는 끝까지 검증할
+# 수 없는 큰 리팩터라 이번에는 하지 않았다. 우선 "실제로 무슨 값을 썼는지 한
+# 곳에서 확인 가능하게"만 만든 것 — 논문 부록의 재현 설정표로 바로 쓸 수 있다.
+
+years: [2022, 2023, 2024, 2025]
+# ../baseline/run_all_models.sh YEARS=(...), gate_tuning/tune_gate.py YEARS=[...],
+# scripts/reproduce_full.sh YEARS=(...) 에 각각 하드코딩되어 있음.
+
+stage: 5  # 5단계 누적 프롬프트(한자병기+영어번역+CoT+self-consistency) 전부 적용
+n_trials: 3  # self-consistency 시행 횟수. gate_tuning/tune_gate.py는 예측 파일의
+             # stage==5 여부만 확인하고 n_trials 자체는 predictions/*.json 안의
+             # trials 배열 길이로 암묵적으로 결정됨(재현 시 3으로 맞출 것)
+
+temperature:
+  self_consistency: 1.0  # ../baseline/tkm_pipeline.py call_llm() 기본값
+  translation: 0.0       # 번역은 항상 결정론적(tkm_pipeline.py translate_to_english)
+  smoke_baseline: 0.0    # adaptive_rag/run_rag.py 가 stage<5일 때 강제 greedy로 override
+
+retrieval:
+  top_k: 20        # adaptive_rag/run_rag.py --rag-top-k 기본값, precompute_maxrel.py/
+                   # precompute_injections.py 도 동일값 사용
+  threshold: 0.5   # adaptive_rag/run_rag.py --rag-threshold 기본값 (실시간 게이트 모드용;
+                   # 논문 결과에 쓰인 사전계산 injections 파일은 게이트 임계값 자체를
+                   # LOYO로 탐색하므로 이 값과 별개)
+  max_inject: 5    # adaptive_rag/run_rag.py --rag-max-inject 기본값
+
+gate:
+  design: T3                    # 채택된 최종 설계, gate_tuning/tune_gate.py (구 tune_gate3.py)
+  delta: 0.005                  # abstain 마진. 코드 기본값은 0.015(T1과 비교용)이지만
+                                 # 논문에 인용된 39.80% 등 헤드라인 수치는 0.005로 생성됨
+                                 # (scripts/reproduce_metrics.sh 기본값도 0.005로 맞춰둠)
+  threshold_grid: "0.0~1.0, step 0.05"   # THRS = [x/20 for x in range(21)] in tune_gate.py
+  confidence_grid: [0.0, 0.67, 1.0]      # CONFS in tune_gate.py (자기일치도 임계값 후보)
+
+# 9개 모델: RES_{tag}_{year}_{cond}.json 파일명에 쓰인 tag → 실제 HF repo id.
+# 원본은 ../baseline/models/{general,domain/*}.txt (표기법이 tag와 다름 —
+# 예: general.txt는 "qwen2.5-7b", 이 실험 predictions/ 파일명은 "qwen2_5_7b").
+models:
+  - tag: qwen2_5_7b
+    repo_id: Qwen/Qwen2.5-7B-Instruct
+  - tag: exaone3_5_7_8b
+    repo_id: LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct
+    vllm_extra_args: "--trust-remote-code"
+  - tag: solar_10_7b
+    repo_id: upstage/SOLAR-10.7B-Instruct-v1.0
+  - tag: mistral_7b
+    repo_id: mistralai/Mistral-7B-Instruct-v0.3
+  - tag: huatuogpt-o1-7b
+    repo_id: FreedomIntelligence/HuatuoGPT-o1-7B
+  - tag: biomistral-7b
+    repo_id: BioMistral/BioMistral-7B
+    vllm_extra_args: "--chat-template ../baseline/chat_templates/generic.jinja"
+  - tag: medllama2-7b
+    repo_id: llSourcell/medllama2_7b
+    vllm_extra_args: "--chat-template ../baseline/chat_templates/generic.jinja"
+  - tag: openbiollm-8b
+    repo_id: aaditya/Llama3-OpenBioLLM-8B
+    vllm_extra_args: "--chat-template ../baseline/chat_templates/generic.jinja"
+  - tag: medgemma-4b
+    repo_id: google/medgemma-4b-it
+# revision(정확한 커밋 해시) 고정 없음 — README.md "환경" 섹션 TODO 참고.

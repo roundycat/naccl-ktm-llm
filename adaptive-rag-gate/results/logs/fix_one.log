@@ -1,7 +1,0 @@
-[fix_one] vLLM 서빙 대기 06:58
-[fix_one] 서빙 OK → 재실행 07:00
-[RAG] 사전계산 주입 로드 /workspace/rag_injections_2022.json: 81/294 주입 (분류기 미로드)
-[fix_one] 최종 tune+report 07:04
-stage5 보고서 저장: /workspace/report_stage5.docx (모델 9, 과목 12)
-stage5 보고서 저장: /workspace/report_stage5_noceiling.docx (모델 9, 과목 12)
-===== FIX_ONE DONE 07-29 07:04 =====

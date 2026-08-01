@@ -1,7 +1,7 @@
 # 어댑티브 RAG — 관련성 분류기를 국시 벤치마크에 붙이기
 
 우리가 학습한 **관련성 분류기**(BERT 크로스인코더, test 96% acc)를 팀원의
-**TKM 국시 벤치마크**(`../ktm-llm-benchmark/tkm_pipeline.py`)에 게이트로 끼워,
+**TKM 국시 벤치마크**(`../baseline/tkm_pipeline.py`)에 게이트로 끼워,
 "우리 분류기가 국시 정답률을 올리는가"를 실제로 측정한다.
 
 ## 구조
@@ -29,19 +29,19 @@ vllm serve Qwen/Qwen2.5-7B-Instruct --port 8000 &
 # 2) baseline (RAG 없음) — 팀원 기준선과 동일
 python run_rag.py --model openai/Qwen/Qwen2.5-7B-Instruct \
     --api-base http://localhost:8000/v1 --api-key sk-dummy \
-    --data ../ktm-llm-benchmark/KTM_data/2025.json --stage 4 \
+    --data ../baseline/KTM_data/2025.json --stage 4 \
     --output out_qwen_2025_s4_base.json
 
 # 3) + 어댑티브 RAG (우리 분류기 게이트)
 python run_rag.py --model openai/Qwen/Qwen2.5-7B-Instruct \
     --api-base http://localhost:8000/v1 --api-key sk-dummy \
-    --data ../ktm-llm-benchmark/KTM_data/2025.json --stage 4 \
+    --data ../baseline/KTM_data/2025.json --stage 4 \
     --rag --corpus ../data/corpus.jsonl --classifier /workspace/bert_clf/best \
     --output out_qwen_2025_s4_rag.json
 ```
 
 정답률 차이(Δ) = **우리 분류기의 국시 기여도**. exaone3.5-7.8b·qwen2.5-7b는
-팀원 기준선(`../ktm-llm-benchmark/ktm_results/general/`)이 이미 있어 직접 비교 가능.
+팀원 기준선(`../baseline/ktm_results/general/`)이 이미 있어 직접 비교 가능.
 
 ## 하이퍼파라미터
 - `--rag-top-k` (기본 20): 1차 후보 수
