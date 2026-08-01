@@ -1,0 +1,50 @@
+[
+ {
+  "setting": "plain (증강 없음)",
+  "acc": 35.99882835383714,
+  "delta_vs_plain": 0.0,
+  "n_cand": 1
+ },
+ {
+  "setting": "신호=T만,  후보=plain/gate",
+  "acc": 36.44795938293302,
+  "delta_vs_plain": 0.44913102909588076,
+  "n_cand": 22
+ },
+ {
+  "setting": "신호=C만,  후보=plain/gate",
+  "acc": 36.72134348760008,
+  "delta_vs_plain": 0.7225151337629399,
+  "n_cand": 4
+ },
+ {
+  "setting": "신호=T×C, 후보=plain/gate  [T1]",
+  "acc": 36.740870923647726,
+  "delta_vs_plain": 0.7420425698105859,
+  "n_cand": 64
+ },
+ {
+  "setting": "신호=T×C, +always_dense   [T2]",
+  "acc": 39.44542081624682,
+  "delta_vs_plain": 3.446592462409683,
+  "n_cand": 65
+ },
+ {
+  "setting": "신호=T×C, +graph계열      [T3]",
+  "acc": 39.796914665104474,
+  "delta_vs_plain": 3.7980863112673333,
+  "n_cand": 129
+ },
+ {
+  "setting": "신호=T만,  +always_dense",
+  "acc": 39.19156414762742,
+  "delta_vs_plain": 3.192735793790277,
+  "n_cand": 23
+ },
+ {
+  "setting": "신호=C만,  +always_dense",
+  "acc": 39.44542081624682,
+  "delta_vs_plain": 3.446592462409683,
+  "n_cand": 5
+ }
+]
